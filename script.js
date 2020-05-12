@@ -16,8 +16,8 @@ const myQuestions = [
       question: "the Fallen are accually called?",
       answers: {
         a: "Elinski",
-        b: "",
-        c: ""
+        b: "The Jhons",
+        c: "Hul'ud"
       },
       correctAnswer: "a"
     },
@@ -86,10 +86,38 @@ output.push(
 
 
 
-function showResults() {}
+function showResults() {
+
+
+
+// on submit display results
+submitButton.addEventListner('click', showResults;
+
+}
 
 // display quiz
 buildQuiz();
 
-// on submit display results
-submitButton.addEventListner('click', showResults);
+var output = []
+
+myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+const answers = [];
+
+for(letter in currentQuestion.answers){
+  answers.push(
+    `<label>
+    <input type="radio" name="questions${questionNumber}" value="${letter}">
+    ${letter} :
+    ${currentQuestion.answers[letter]}
+    </label>`
+  );
+}
+
+output.push(
+  `<div class="question"> ${currentQuestion.question} </div>
+  <div class="answers"> ${answers.join('')} </dive>`
+);
+
+quizContainer.innerHTML = output.join('');
+});

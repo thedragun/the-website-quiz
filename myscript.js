@@ -59,6 +59,8 @@ function buildQuiz() {
     quizContainer.innerHTML = output.join('');
 }
 
+// display quiz
+buildQuiz();
 
 myQuestions.forEach((currentQuestion, questionNumber) => {
   // we'll want to store the list of answer choices
@@ -95,8 +97,7 @@ submitButton.addEventListner('click', showResults;
 
 }
 
-// display quiz
-buildQuiz();
+
 
 var output = []
 

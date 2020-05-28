@@ -93,7 +93,7 @@ function showResults() {
 
 
 // on submit display results
-submitButton.addEventListner('click', showResults;
+submitButton.addEventListner('click', showResults);
 
 }
 
